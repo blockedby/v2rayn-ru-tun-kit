@@ -109,6 +109,32 @@ sing-box run -c .../binConfigs/config.json
 
 If you see `xray run -c config.json`, your selected node/default core is still Xray.
 
+
+### Current Steam/Dota bypass strings
+
+Use these as flat direct process rules in v2rayN:
+
+```text
+steam
+steamwebhelper
+steam-runtime-steam-remote
+dota2
+dota2_linux
+```
+
+And as a separate direct process rule for Steam library folders / Dota exact paths:
+
+```text
+/home/kcnc/.steam/debian-installation/steamapps/common/
+/home/kcnc/.steam/root/steamapps/common/
+/home/kcnc/.steam/steam/steamapps/common/
+/home/kcnc/.steam/debian-installation/steamapps/common/dota 2 beta/game/bin/linuxsteamrt64/dota2
+/home/kcnc/.steam/root/steamapps/common/dota 2 beta/game/bin/linuxsteamrt64/dota2
+/home/kcnc/.steam/steam/steamapps/common/dota 2 beta/game/bin/linuxsteamrt64/dota2
+```
+
+Keep these above final/catch-all proxy rules.
+
 ## Rule precedence
 
 sing-box uses first-match-wins routing. Intended order:

@@ -18,10 +18,15 @@ def rid() -> str:
 rules = [
     {"Id": rid(), "OutboundTag": "direct", "Process": [
         "steam", "steamwebhelper", "steam-runtime-steam-remote", "dota2", "dota2_linux",
+    ], "Enabled": True, "Remarks": "Steam/Dota executable names direct"},
+    {"Id": rid(), "OutboundTag": "direct", "Process": [
+        "/home/kcnc/.steam/debian-installation/steamapps/common/",
+        "/home/kcnc/.steam/root/steamapps/common/",
+        "/home/kcnc/.steam/steam/steamapps/common/",
         "/home/kcnc/.steam/debian-installation/steamapps/common/dota 2 beta/game/bin/linuxsteamrt64/dota2",
         "/home/kcnc/.steam/root/steamapps/common/dota 2 beta/game/bin/linuxsteamrt64/dota2",
         "/home/kcnc/.steam/steam/steamapps/common/dota 2 beta/game/bin/linuxsteamrt64/dota2",
-    ], "Enabled": True, "Remarks": "Steam/Dota/direct games by process"},
+    ], "Enabled": True, "Remarks": "Steam library folders and Dota exact paths direct"},
     {"Id": rid(), "OutboundTag": "direct", "Protocol": ["bittorrent"], "Enabled": True, "Remarks": "BitTorrent direct"},
     {"Id": rid(), "OutboundTag": "block", "Domain": ["geosite:category-ads-all"], "Enabled": True, "Remarks": "Ads block"},
     {"Id": rid(), "OutboundTag": "direct", "Ip": ["geoip:private"], "Enabled": True, "Remarks": "LAN/private IP direct"},
