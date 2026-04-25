@@ -59,6 +59,24 @@ This installs:
 
 It prints a backup directory and creates a `restore.sh` inside it.
 
+
+## Create flat v2rayN routing profile
+
+To avoid ambiguous combined rules, create an active flat GUI routing profile:
+
+```bash
+~/code/tools/v2rayn-ru-tun-kit/scripts/backup-v2rayn-configs.sh
+~/code/tools/v2rayn-ru-tun-kit/scripts/create-flat-routing-profile.py
+```
+
+Then restart v2rayN/core. The created profile is named:
+
+```text
+RUv2-flat-steam-direct-free-speech
+```
+
+It uses separate rules so fields do not accidentally combine with AND semantics.
+
 ## Apply after v2rayN restart/regeneration
 
 v2rayN often regenerates `config.json` / `configPre.json`. After switching node, changing routing, restarting core, or updating subscription, run:
